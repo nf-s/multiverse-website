@@ -1,6 +1,6 @@
 # Multiverse 2024 website
 
-https://nf-s.github.io/multiverse-2024/
+https://multiverse2024.forbes-smith.com/
 
 Currently in development.
 
