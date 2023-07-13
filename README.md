@@ -1,5 +1,9 @@
 # Multiverse 2024 website
 
+https://nf-s.github.io/multiverse-2024/
+
+Currently in development.
+
 It is built using [Hugo](https://gohugo.io/), a static site generator. It uses the [Osprey delight](https://github.com/kdevo/osprey-delight) theme.
 
 ## To run locally
