@@ -35,9 +35,10 @@ iframe {
   position: absolute;
   top: 50%;
   left: 50%;
+  aspect-ratio: 16 / 9;
   min-width: 100vw;
-  width: calc(100vh * 1.78);
-  height: 100vh;
+  // Compensate for margin to remove YouTube title bar and also remove YouTube logo/controls
+  height: calc(100vh + 128px);
   transform: translate(-50%, -50%);
   // Add margin to remove YouTube title bar
   margin-top: -64px;
