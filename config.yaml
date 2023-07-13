@@ -26,16 +26,16 @@ Params:
 
   # logoSmall is the logo that will be shown in the left corner of the nav bar.
   #   Use a path relative to the assets dir for auto-resizing.
-  logoSmall: "favicon.png"
+  logoSmall: "logo-small.png"
 
   # background can optionally be specified as an image layer behind logoBig at the top of the page (parallax effect).
   background: "background.png"
 
   # opengraphImage specifies the image that is shown when previewing the site in a messenger or Google Search.
-  opengraphImage: "/images/osprey-delight.png"
+  opengraphImage: "/images/logo-small.png"
 
   # favicon of the site (e.g. smaller version of logoSmall).
-  favicon: "favicon.png"
+  favicon: "logo-small.png"
 
   # theme your site by choosing one of the themes under assets/sass/themes:
   #   - delight is the light version of osprey-delight
@@ -47,7 +47,7 @@ Params:
   #tagline: "Welcome!"
   # mdTagline can be used instead to specify the tagline in Markdown for more customizability.
   #   Note that {cursor} is a placeholder and will be replaced by the actual cursor HTML when rendering.
-  mdTagline: "# Multiverse 2024"
+  mdTagline: "### Presents\n\n# MULTIVERSE 2024"
 
   # enforceSinglePage will enforce redirection to the baseURL for all sub-directories/-pages.
   #   Example: If you create about.md, Hugo will also create a '/about/index.html' which might not be what you want for a *single* page site.
@@ -64,10 +64,10 @@ Params:
   ##   The type specifies the icon to use. For more information, see:
   ##   https://github.com/kdevo/osprey-delight/blob/dev/CUSTOMIZING.md#icons
   Social:
-    - type: heart
-      url: "https://github.com/sponsors/kdevo"
+    - type: facebook
+      url: "https://www.facebook.com/technobrats/"
     - type: spotify
-      url: https://open.spotify.com/artist/5NhBOdJh6T1tgtM5Au1Opl
+      url: https://open.spotify.com/playlist/3KsP4S6HAPDfWQUmoew32s?si=8a81748ab7be409b
 
   ## Additional theme features:
   Feat:
@@ -131,21 +131,25 @@ Menu:
       url: "/#about"
       # weight controls the order of the menu items.
       weight: 1
+    - name: "Info"
+      identifier: info
+      url: "/#info"
+      weight: 2
     - name: "Tickets"
       # identifier controls the section type (and therewith the appearence).
       identifier: tickets
       # url must be an anchor, for smooth scrolling to it when clicking on the menu item.
       url: "/#tickets"
       # weight controls the order of the menu items.
-      weight: 1
+      weight: 3
     - name: "Lineup"
       identifier: gallery
       url: "/#lineup"
-      weight: 2
+      weight: 4
     - name: "Contact"
       identifier: contact
       url: "/#contact"
-      weight: 4
+      weight: 5
     # - name: ""
     #   # pre makes it possible to use arbitrary HTML before the name, e.g. referencing icons here is possible:
     #   pre: '<svg class="icon"><use xlink:href="#icon-external"/></svg>&nbsp;'
