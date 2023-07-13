@@ -29,7 +29,7 @@ Params:
   logoSmall: "logo-small.png"
 
   # background can optionally be specified as an image layer behind logoBig at the top of the page (parallax effect).
-  background: "background.png"
+  # background: "background.png"
 
   # opengraphImage specifies the image that is shown when previewing the site in a messenger or Google Search.
   opengraphImage: "/images/logo-small.png"
@@ -47,7 +47,7 @@ Params:
   #tagline: "Welcome!"
   # mdTagline can be used instead to specify the tagline in Markdown for more customizability.
   #   Note that {cursor} is a placeholder and will be replaced by the actual cursor HTML when rendering.
-  mdTagline: "### Presents\n\n# MULTIVERSE 2024"
+  mdTagline: "### presents\n\n# MULTIVERSE 2024"
 
   # enforceSinglePage will enforce redirection to the baseURL for all sub-directories/-pages.
   #   Example: If you create about.md, Hugo will also create a '/about/index.html' which might not be what you want for a *single* page site.
