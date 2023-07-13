@@ -60,7 +60,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://nf-s.github.io/multiverse-2024/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

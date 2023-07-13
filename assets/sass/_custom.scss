@@ -12,3 +12,20 @@
 .gallery .overlay {
   background-color: #0000009c;
 }
+
+.video-container,
+.video-overlay {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  width: calc(100vh * 1.78);
+  height: 100vh;
+  transform: translate(-50%, -50%);
+}
