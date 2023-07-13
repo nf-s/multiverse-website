@@ -33,7 +33,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.115.1
+      HUGO_VERSION: 0.115.2
     steps:
       - name: Install Hugo CLI
         run: |
@@ -49,8 +49,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -60,7 +58,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://nf-s.github.io/multiverse-2024/"
+            --baseURL "https://multiverse2023.forbes-smith.com/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
