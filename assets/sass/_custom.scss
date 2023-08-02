@@ -1,3 +1,5 @@
+$accent-color: #c151ff;
+
 .home-logo {
   width: 250px;
 }
@@ -8,6 +10,11 @@
 
 section {
   background: #000303;
+}
+
+section.about {
+  background-color: rgba(0, 0, 0, 0.17);
+  backdrop-filter: blur(20px);
 }
 
 .gallery .overlay {
