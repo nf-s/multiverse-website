@@ -58,7 +58,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://multiverse2024.forbes-smith.com/"
+            --baseURL "https://dev.multiverse.technobrats.com.au/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

@@ -1,6 +1,6 @@
 # Multiverse 2024 website
 
-https://multiverse2024.forbes-smith.com/
+https://dev.multiverse.technobrats.com.au/
 
 Currently in development.
 
