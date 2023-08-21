@@ -1,0 +1,26 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown a {
+  @apply font-medium text-primary-300 hover:underline hover:underline;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply pt-4 text-lg font-normal lg:text-xl text-gray-100;
+}
+
+.markdown h1 {
+  @apply pb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-100 leading-none tracking-tight font-mono;
+}
+
+.markdown h2 {
+  @apply pt-6 text-xl md:text-2xl lg:text-3xl font-bold text-gray-100 leading-none tracking-tight font-mono;
+}
+
+.markdown ul {
+  @apply max-w-md space-y-1 text-gray-100 list-disc list-inside font-mono;
+}
