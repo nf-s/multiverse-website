@@ -3,7 +3,7 @@
 }
 
 .markdown a {
-  @apply font-medium text-primary-300 hover:underline hover:underline;
+  @apply font-mono font-medium text-primary-300 hover:underline hover:underline;
 }
 
 .markdown p,
@@ -22,5 +22,5 @@
 }
 
 .markdown ul {
-  @apply max-w-md space-y-1 text-gray-100 list-disc list-inside font-mono;
+  @apply space-y-1 text-gray-100 list-disc list-inside;
 }

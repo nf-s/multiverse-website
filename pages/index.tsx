@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <Layout showLanding>
       <a id="about" type="hidden"></a>
-      <div className="h-screen-with-nav mx-auto py-6 sm:px-6 lg:px-8 backdrop-blur-lg">
+      <div className="min-h-screen-with-nav mx-auto py-6 sm:px-6 lg:px-8 backdrop-blur-lg">
         <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
           <h1 className="px-4 py-6 sm:px-6 lg:px-8  text-6xl font-bold text-gray-100 text-center">
             About
