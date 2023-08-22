@@ -92,7 +92,8 @@ export default function Example(props: {
           as="nav"
           className={`bg-gray-900 bg-opacity-30 backdrop-blur-lg fixed top-0 font-mono ${
             props.showLanding ? "md:sticky" : ""
-          } md:flex md:justify-center w-screen z-10 pointer-events-auto`}
+          } md:flex md:justify-center w-screen z-10`}
+          style={{ pointerEvents: "all" }}
         >
           {({ open }) => (
             <>
@@ -162,7 +163,7 @@ export default function Example(props: {
 
               <Disclosure.Panel
                 id="nav-panel"
-                className={`md:hidden h-screen-with-nav`}
+                className={`md:hidden h-screen-with-nav overflow-y-auto`}
               >
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col items-center gap-3">
                   {navigation.map((item) =>
