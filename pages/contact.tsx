@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ContentWrapper from "../components/ContentWrapper";
@@ -51,6 +52,9 @@ export default function Info() {
 
   return (
     <Layout>
+      <Head>
+        <title>Multiverse 2024 | Contact</title>
+      </Head>
       <ContentWrapper>
         <div className="w-fit  m-auto">
           {/* Show form for initial state */}

@@ -6,6 +6,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Roboto_Mono } from "next/font/google";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -58,7 +59,10 @@ export default function Example(props: {
 
   return (
     <>
-      <div className="">
+      <Head>
+        <title>Multiverse 2024</title>
+      </Head>
+      <div className="overflow-x-hidden">
         {props.showLanding ? (
           <>
             <div className="placeholder-background"></div>
