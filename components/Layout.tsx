@@ -98,7 +98,10 @@ export default function Example(props: {
                 setShowVideo(false);
               }}
               onStateChange={(e) => {
-                if (e.data === YouTube.PlayerState.CUED) {
+                if (
+                  e.data === YouTube.PlayerState.CUED ||
+                  e.data === YouTube.PlayerState.UNSTARTED
+                ) {
                   setShowVideo(false);
                 }
               }}
