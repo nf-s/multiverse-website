@@ -155,8 +155,10 @@ export default function Info() {
                   "
                         >
                           <option>Performance/DJ</option>
-                          <option>Art Installation</option>
-                          <option>Food</option>
+                          <option>Workshops</option>
+                          <option>Visual Art</option>
+                          <option>Stallholder</option>
+                          <option>Volunteer</option>
                           <option>Other</option>
                         </select>
                       </label>
