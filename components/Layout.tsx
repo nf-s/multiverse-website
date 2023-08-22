@@ -142,11 +142,13 @@ export default function Example(props: {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img
-                        className="h-6"
-                        src="/images/logo-small.png"
-                        alt="Technobrats Logo"
-                      />
+                      <Link href={"/"}>
+                        <img
+                          className="h-6"
+                          src="/images/logo-small.png"
+                          alt="Technobrats Logo"
+                        />
+                      </Link>
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
