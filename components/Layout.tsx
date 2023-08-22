@@ -104,7 +104,7 @@ export default function Example(props: {
               }}
             />
 
-            <div className="video-overlay"></div>
+            <div className="video-overlay bg-black bg-opacity-20"></div>
             <div className="h-screen md-h-screen-with-nav w-screen flex flex-col justify-between">
               <div className="flex flex-col flex-grow items-center gap-12 px-4 pt-24">
                 <Image
