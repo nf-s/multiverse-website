@@ -9,7 +9,7 @@ const robotoMonoFont = Roboto_Mono({
 });
 
 const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
+  weight: ["100", "300", "400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-roboto",
 });
