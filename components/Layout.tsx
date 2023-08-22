@@ -5,19 +5,12 @@ import {
   PlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { Roboto_Mono } from "next/font/google";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import YouTube from "react-youtube";
-
-const robotoMonoFont = Roboto_Mono({
-  subsets: ["latin"],
-  weight: ["200", "400", "700"],
-  style: ["italic", "normal"],
-});
 
 const navigation = [
   { name: "About", href: "/#about" },
@@ -29,14 +22,11 @@ const navigation = [
       { name: "Location", href: "/info#location" },
       { name: "Camping", href: "/info#camping" },
       { name: "Festival Guidelines", href: "/info#festival-guidelines" },
-      { name: "Festival Rules", href: "/info#festival-rules" },
+      { name: "Core Festival Rules", href: "/info#core-festival-rules" },
       { name: "What To Bring", href: "/info#what-to-bring" },
-      { name: "Conditions Of Entry", href: "/info#conditions-of-entry" },
       { name: "Road Safety", href: "/info#road-safety" },
       { name: "Sneak-ins policy", href: "/info#sneak-ins-policy" },
-      { name: "Festival Times", href: "/info#festival-times" },
-      { name: "Family Friendly Event", href: "/info#family-friendly-event" },
-      { name: "Rubbish", href: "/info#rubbish" },
+      { name: "Conditions Of Entry", href: "/info#conditions-of-entry" },
     ],
   },
   { name: "Tickets", href: "/tickets" },
@@ -121,15 +111,16 @@ export default function Example(props: {
                   height={180}
                 />
                 <h3
-                  className={`text-xl md:text-3xl font-mono font-light text-center leading-relaxed text-slate-50 ${robotoMonoFont.className} font-mono`}
+                  className={`text-xl md:text-xl font-mono font-thin text-center leading-relaxed text-slate-50 font-sans`}
                 >
                   presents
                 </h3>
-                <h1
-                  className={`text-6xl multiverse-logo font-mono text-center leading-relaxed text-slate-50 ${robotoMonoFont.className} font-mono`}
-                >
-                  Multiverse 2024
-                </h1>
+                <Image
+                  src="/images/multiverse-logo.png"
+                  alt="me"
+                  width={750}
+                  height={100}
+                />
               </div>
             </div>
           </>

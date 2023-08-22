@@ -1,11 +1,4 @@
-import Link from "next/link";
 import Layout from "../components/Layout";
-import { Roboto_Mono } from "next/font/google";
-const robotoMonoFont = Roboto_Mono({
-  subsets: ["latin"],
-  weight: ["200", "400", "700"],
-  style: ["italic", "normal"],
-});
 
 const Home = () => {
   return (
@@ -14,7 +7,7 @@ const Home = () => {
       <div className="min-h-screen-with-nav md:flex md:items-center py-6 sm:px-6 lg:px-8 backdrop-blur-lg">
         <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
           <div
-            className={`divide-y text-xl md:text-2xl text-white text-center md:leading-relaxed px-4 py-6 sm:px-6 lg:px-8 ${robotoMonoFont.className} font-mono`}
+            className={`divide-y text-xl md:text-2xl text-white text-center md:leading-relaxed px-4 py-6 sm:px-6 lg:px-8 $ font-mono`}
           >
             <div className={`italic font-extralight pb-6 md:pb-16`}>
               A ripple in the space-time continuum has torn a rift in our
