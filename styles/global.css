@@ -16,14 +16,21 @@ body {
   font-family: "Bebas Neue", sans-serif;
 }
 
+.placeholder-background {
+  background-image: url("/images/placeholder-background.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
 .video-container,
-.video-overlay {
+.video-overlay,
+.placeholder-background {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
   position: fixed;
   z-index: -1;
-  @apply transition-opacity duration-500;
+  @apply transition-opacity duration-1000;
 }
 
 .video-container iframe {

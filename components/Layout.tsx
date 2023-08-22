@@ -61,6 +61,7 @@ export default function Example(props: {
       <div className="">
         {props.showLanding ? (
           <>
+            <div className="placeholder-background"></div>
             <YouTube
               videoId={"C-ZCGF6nE58"}
               loading={"lazy"}
