@@ -8,9 +8,9 @@ import {
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import NavLink from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import YouTube from "react-youtube";
 
 const robotoMonoFont = Roboto_Mono({
   subsets: ["latin"],
@@ -54,15 +54,55 @@ export default function Example(props: {
   const router = useRouter();
 
   const [subItemOpen, setSubItemOpen] = useState<string>();
+  const [showVideo, setShowVideo] = useState<boolean>(false);
 
   return (
     <>
       <div className="">
         {props.showLanding ? (
           <>
-            <div className="video-container">
-              <iframe src="https://www.youtube.com/embed/C-ZCGF6nE58?disablekb=1&rel=0&modestbranding=1&controls=0&autoplay=1&mute=1&playsinline=1&loop=1&playlist=C-ZCGF6nE58"></iframe>
-            </div>
+            <YouTube
+              videoId={"C-ZCGF6nE58"}
+              loading={"lazy"}
+              className="video-container"
+              style={{ opacity: showVideo ? 1 : 0 }}
+              opts={{
+                height: undefined,
+                width: undefined,
+                playerVars: {
+                  disablekb: 1,
+                  rel: 0,
+                  modestbranding: 1,
+                  controls: 0,
+                  autoplay: 1,
+                  playsinline: 1,
+                  loop: 1,
+                  playlist: "C-ZCGF6nE58",
+                },
+              }}
+              onReady={(e) => {
+                e.target.mute();
+                e.target.playVideo();
+              }}
+              onPlay={() => {
+                setShowVideo(true);
+              }}
+              onPause={() => {
+                setShowVideo(false);
+              }}
+              onEnd={() => {
+                setShowVideo(false);
+              }}
+              onError={() => {
+                setShowVideo(false);
+              }}
+              onStateChange={(e) => {
+                if (e.data === YouTube.PlayerState.CUED) {
+                  setShowVideo(false);
+                }
+              }}
+            />
+
             <div className="video-overlay"></div>
             <div className="h-screen md-h-screen-with-nav w-screen flex flex-col justify-between">
               <div className="flex flex-col flex-grow items-center gap-12 px-4 pt-24">
