@@ -1,12 +1,12 @@
 import ContentWrapper from "../components/ContentWrapper";
 import Layout from "../components/Layout";
-import InfoMdx from "../content/info.mdx";
+import TicketsMdx from "../content/tickets.mdx";
 
-export default function Info() {
+export default function Tickets() {
   return (
     <Layout>
       <ContentWrapper>
-        <InfoMdx />
+        <TicketsMdx />
       </ContentWrapper>
     </Layout>
   );

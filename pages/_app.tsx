@@ -15,6 +15,7 @@ const roboto = Roboto({
 });
 
 export default function MyApp({ Component, pageProps }) {
+  console.log(pageProps);
   return (
     <main
       className={`${roboto.variable} ${robotoMonoFont.variable} font-sans text-white `}

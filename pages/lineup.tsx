@@ -1,12 +1,12 @@
 import ContentWrapper from "../components/ContentWrapper";
 import Layout from "../components/Layout";
-import InfoMdx from "../content/info.mdx";
+import LineupIntroMdx from "../content/lineup-intro.mdx";
 
-export default function Info() {
+export default function Lineup() {
   return (
     <Layout>
       <ContentWrapper>
-        <InfoMdx />
+        <LineupIntroMdx />
       </ContentWrapper>
     </Layout>
   );

@@ -14,11 +14,11 @@
 }
 
 .markdown h1 {
-  @apply pb-4 text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-100 leading-none tracking-tight font-mono;
+  @apply pb-8 text-6xl font-extrabold text-gray-100 leading-none tracking-tight font-mono;
 }
 
 .markdown h2 {
-  @apply pt-6 text-xl md:text-2xl lg:text-3xl font-bold text-gray-100 leading-none tracking-tight font-mono;
+  @apply pt-16 text-3xl font-bold text-gray-100 leading-none tracking-tight font-mono;
 }
 
 .markdown ul {
