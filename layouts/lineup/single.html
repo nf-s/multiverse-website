@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "body-top" . }}
+    <main>
+      <section class="blog" id="blog">
+        <div class="container">
+          <div class="row">
+            <div class="lineup-header">
+              <div
+                class="lineup-header-img-container"
+                {{
+                if
+                .Params.color
+                }}style="background-color:{{ .Params.color }}"
+                {{
+                end
+                }}
+              >
+                {{ partial "lazyimg" (dict "img" .Params.image "maxsize"
+                (default "600x" site.Params.Image.Gallery.resize)
+                "responsivesizes" (default (slice "420x" "600x")) "lqipsize"
+                (default "16x Gaussian" site.Params.Gallery.Gallery.resizeLQIP)
+                "resizeoptions" (default "q90 MitchellNetravali"
+                site.Params.Image.Gallery.resizeOptions) "alt" (default
+                .Params.title .Params.alt) "class" "" "renderer" (default
+                "lqip-webp" site.Params.Image.Gallery.renderer) "resizer"
+                (default "responsive" site.Params.Image.Gallery.resizer)) }}
+              </div>
+            </div>
+
+            <div class="lineup-content">
+              <h2>{{ .Params.title }}</h2>
+
+              <article class="entry-content">{{ .Content }}</article>
+
+              <!-- Buttons -->
+              <div class="row center-xs">
+                {{ range .Params.buttons -}}
+                <div class="col-xs">
+                  <a
+                    href="{{ .url }}"
+                    {{
+                    if
+                    default
+                    false
+                    .newTab
+                    -}}target="_blank"
+                    rel="noopener"
+                    {{-
+                    end
+                    }}
+                  >
+                    <button type="submit">
+                      {{ with .icon }}{{ partial "icon" . }}{{ end }} {{ i18n
+                      (default "view" .i18n) }}
+                    </button>
+                  </a>
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{ partial "footer.html" . }} {{ partial "body-bottom" . }}
+  </body>
+</html>

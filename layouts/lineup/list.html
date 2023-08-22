@@ -1,0 +1,75 @@
+{{ if .Site.Params.enforceSinglePage -}}
+<meta http-equiv="refresh" content="0; url={{ .Site.BaseURL }}" />
+{{- else -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  {{ partial "head.html" . }}
+  <style>
+    .gallery-modal-link {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+
+    .gallery-item {
+      position: relative;
+    }
+  </style>
+  <body>
+    {{ partial "body-top" . }} {{ $gallery := (where site.RegularPages "Section"
+    "lineup") }}
+    <main>
+      <section class="blog" id="blog">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12"><h1>{{ humanize .Type }}</h1></div>
+          </div>
+          <div class="row">
+          {{ range $gallery }}
+            <div
+              class="gallery-item col-xs-12 col-md-6 col-lg-4"
+              onclick
+              {{
+              if
+              .Params.color
+              }}style="background-color:{{ .Params.color }}"
+              {{
+              end
+              }}
+            >
+              <div class="gallery-img-container">
+                {{ partial "sections/gallery/img" . }}
+              </div>
+              <div
+                class="row center-xs middle-xs overlay"
+                {{
+                with
+                .Params.hoverColor
+                }}style="background-color: {{ . }}"
+                {{
+                end
+                }}
+              >
+                <a href="{{ .Permalink }}" class="gallery-modal-link" ></a>
+                <div class="col-xs">
+                  <h2>{{ .Params.Title }}</h2>
+                  {{ with .Params.subtitle }}
+                  <h3>{{ . }}</h3>
+                  {{- end }}
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{ partial "footer.html" . }} {{ partial "body-bottom" . }}
+  </body>
+</html>
+{{- end }}

@@ -132,19 +132,20 @@ Menu:
       # weight controls the order of the menu items.
       weight: 1
     - name: "Info"
-      identifier: info
-      url: "/#info"
+      identifier: event
+      url: "/event/details"
       weight: 2
     - name: "Tickets"
       # identifier controls the section type (and therewith the appearence).
-      identifier: tickets
+      identifier: tickets-summary
       # url must be an anchor, for smooth scrolling to it when clicking on the menu item.
-      url: "/#tickets"
+      # url: "https://some-link-to-tickets.com"
+      url: "#tickets"
       # weight controls the order of the menu items.
       weight: 3
     - name: "Lineup"
-      identifier: gallery
-      url: "/#lineup"
+      identifier: lineup-summary
+      url: "/lineup"
       weight: 4
     - name: "Contact"
       identifier: contact

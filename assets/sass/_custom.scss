@@ -8,13 +8,25 @@ $accent-color: #c151ff;
   padding: 0;
 }
 
-section {
-  background: #000303;
+#eventdetails ul {
+  text-align: left;
+  width: fit-content;
+  margin: auto;
 }
 
-section.about {
-  background-color: rgba(0, 0, 0, 0.17);
+main {
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.home section,
+.home .about {
+  background-color: rgba(0, 0, 0, 0.17);
+  border-bottom: solid rgba(255, 255, 255, 0.3) 2px;
+}
+
+section#contact {
+  background-color: #000303;
 }
 
 .gallery .overlay {
