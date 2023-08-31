@@ -22,6 +22,15 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <meta
+          property="og:image"
+          content="https://multiverse.technobrats.com.au/images/placeholder-background.jpg"
+        />
+        <meta
+          property="og:title"
+          content="Technobrats presents Multiverse 2024"
+        />
       </Head>
       <body>
         <Main />
