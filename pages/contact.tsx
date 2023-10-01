@@ -79,7 +79,7 @@ export default function Info() {
           {formSubmitState === "initial" ? (
             <>
               <ContactUsIntroMdx />
-              <div className="py-12">
+              <div className="pt-12">
                 <div className="mt-8 max-w-md">
                   <label className="block">
                     <span className="text-gray-100 font-mono">
@@ -126,17 +126,17 @@ export default function Info() {
                           <input
                             {...register("nameRequired", { required: true })}
                             className={`font-mono font-light
-                          mt-0
-                          block
-                          w-full
-                          px-0.5 bg-transparent
-                          border-0 border-b-2 ${
-                            errors.nameRequired
-                              ? "border-red-400"
-                              : "border-gray-700"
-                          }
-                          focus:ring-0 focus:border-white
-                        `}
+                              mt-0
+                              block
+                              w-full
+                              px-0.5 bg-transparent
+                              border-0 border-b-2 ${
+                                errors.nameRequired
+                                  ? "border-red-400"
+                                  : "border-gray-700"
+                              }
+                              focus:ring-0 focus:border-white
+                            `}
                           />
                           {errors.nameRequired && (
                             <div className=" text-red-400 mt-2">
@@ -155,16 +155,16 @@ export default function Info() {
                             <input
                               {...register("orgName")}
                               className={`font-mono font-light
-                              mt-0
-                              block
-                              w-full
-                              px-0.5 bg-transparent
-                              border-0 border-b-2 ${
-                                errors.nameRequired
-                                  ? "border-red-400"
-                                  : "border-gray-700"
-                              }
-                              focus:ring-0 focus:border-white
+                                mt-0
+                                block
+                                w-full
+                                px-0.5 bg-transparent
+                                border-0 border-b-2 ${
+                                  errors.nameRequired
+                                    ? "border-red-400"
+                                    : "border-gray-700"
+                                }
+                                focus:ring-0 focus:border-white
                             `}
                             />
                           </label>
@@ -177,18 +177,18 @@ export default function Info() {
                             {...register("emailRequired", { required: true })}
                             type="email"
                             className={`
-                          font-mono font-light
-                          mt-0
-                          block
-                          w-full
-                          px-0.5 bg-transparent
-                          border-0 border-b-2 ${
-                            errors.emailRequired
-                              ? "border-red-400"
-                              : "border-gray-700"
-                          }
-                          focus:ring-0 focus:border-white
-                        `}
+                              font-mono font-light
+                              mt-0
+                              block
+                              w-full
+                              px-0.5 bg-transparent
+                              border-0 border-b-2 ${
+                                errors.emailRequired
+                                  ? "border-red-400"
+                                  : "border-gray-700"
+                              }
+                              focus:ring-0 focus:border-white
+                            `}
                             placeholder="john@example.com"
                           />
                           {errors.emailRequired && (
@@ -205,15 +205,17 @@ export default function Info() {
                             {...register("phone")}
                             type="tel"
                             className={`font-mono font-light
-                          mt-0
-                          block
-                          w-full
-                          px-0.5 bg-transparent
-                          border-0 border-b-2 ${
-                            errors.phone ? "border-red-400" : "border-gray-700"
-                          }
-                          focus:ring-0 focus:border-white
-                        `}
+                              mt-0
+                              block
+                              w-full
+                              px-0.5 bg-transparent
+                              border-0 border-b-2 ${
+                                errors.phone
+                                  ? "border-red-400"
+                                  : "border-gray-700"
+                              }
+                              focus:ring-0 focus:border-white
+                          `}
                           />
                           {errors.phone && (
                             <div className=" text-red-400 mt-2">
@@ -260,13 +262,13 @@ export default function Info() {
                             <textarea
                               {...register("socials")}
                               className={`font-mono font-light
-                          mt-0
-                          block
-                          w-full
-                          px-0.5 bg-transparent
-                          border-0 border-b-2                          
-                          focus:ring-0 focus:border-white
-                        `}
+                                mt-0
+                                block
+                                w-full
+                                px-0.5 bg-transparent
+                                border-0 border-b-2                          
+                                focus:ring-0 focus:border-white
+                              `}
                               rows={4}
                               placeholder="Facebook, Instagram, Soundcloud, Mixcloud, etc."
                             ></textarea>
