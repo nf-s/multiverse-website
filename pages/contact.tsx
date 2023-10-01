@@ -159,6 +159,7 @@ export default function Info() {
                                 block
                                 w-full
                                 px-0.5 bg-transparent
+                                border-0 border-b-2 border-gray-700
                                 focus:ring-0 focus:border-white
                             `}
                             />
