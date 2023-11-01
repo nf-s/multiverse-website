@@ -101,43 +101,50 @@ export default function Info() {
                         value=""
                         disabled
                         selected
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Select a reason
                       </option>
                       <option
                         value={FormReason.Performance}
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Performance
                       </option>
                       <option
                         value={FormReason.Workshops}
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Workshops
                       </option>
                       <option
                         value={FormReason.VisualArt}
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Visual Art
                       </option>
                       <option
                         value={FormReason.Stallholder}
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Stallholder
                       </option>
                       <option
                         value={FormReason.Volunteer}
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Volunteer
                       </option>
                       <option
                         value={FormReason.Other}
-                        className="font-mono text-white bg-black"
+                        className="text-white bg-black"
+                        style={{ fontFamily: "sans-serif" }}
                       >
                         Other
                       </option>
