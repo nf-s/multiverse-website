@@ -101,43 +101,43 @@ export default function Info() {
                         value=""
                         disabled
                         selected
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Select a reason
                       </option>
                       <option
                         value={FormReason.Performance}
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Performance/DJ
                       </option>
                       <option
                         value={FormReason.Workshops}
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Workshops
                       </option>
                       <option
                         value={FormReason.VisualArt}
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Visual Art
                       </option>
                       <option
                         value={FormReason.Stallholder}
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Stallholder
                       </option>
                       <option
                         value={FormReason.Volunteer}
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Volunteer
                       </option>
                       <option
                         value={FormReason.Other}
-                        className="text-white bg-black"
+                        className="font-mono text-white bg-black"
                       >
                         Other
                       </option>
