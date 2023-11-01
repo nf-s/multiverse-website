@@ -26,7 +26,7 @@ enum FormReason {
 }
 
 const orgNameMap = new Map<FormReason, string>();
-orgNameMap.set(FormReason.Performance, "Act/DJ name");
+orgNameMap.set(FormReason.Performance, "Act name");
 orgNameMap.set(FormReason.Workshops, "Workshop name");
 orgNameMap.set(FormReason.Stallholder, "Stall name");
 
@@ -109,7 +109,7 @@ export default function Info() {
                         value={FormReason.Performance}
                         className="font-mono text-white bg-black"
                       >
-                        Performance/DJ
+                        Performance
                       </option>
                       <option
                         value={FormReason.Workshops}
@@ -255,7 +255,7 @@ export default function Info() {
                             Details*
                           </span>
                           <textarea
-                            placeholder="Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc"
+                            placeholder="Please include anything we would need to provide you - e.g. Equipment, Power, Water etc"
                             {...register("detailsRequired", { required: true })}
                             className={`font-mono font-light
                               mt-0
@@ -297,7 +297,7 @@ export default function Info() {
                                 focus:ring-0 focus:border-white
                               `}
                               rows={4}
-                              placeholder="Facebook, Instagram, Soundcloud, Mixcloud, etc."
+                              placeholder="Facebook, Instagram, etc."
                             ></textarea>
                           </label>
                         ) : null}
