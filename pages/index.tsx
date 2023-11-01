@@ -16,12 +16,18 @@ const Home = () => {
               from another perspective. This January, we invite you to transcend
               beyond the physical Universe, and experience the Multiverse.
             </div>
-            <div className="pt-6 md:pt-16">
+            <div className="pt-6 md:pt-16 pb-6 md:pb-16">
               Multiverse Festival is a unique open air music, arts and lifestyle
               festival promoting self-expression and freedom in natural
               landscapes. As we look forward to our fourth edition, we remain
               fiercely independent - we are proudly free of corporate
               sponsorship, state-funding or political affiliations.
+            </div>
+            <div className="pt-6 md:pt-16 text-lg">
+              In recognition of the deep history and culture of this Island,
+              Technobrats would like to acknowledge and pay our respects to all
+              Tasmanian Aboriginal people; the traditional owners of the Land
+              upon which we meet/gather.
             </div>
           </div>
         </div>
