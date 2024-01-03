@@ -21,7 +21,7 @@ enum FormReason {
   Workshops = "workshops",
   VisualArt = "visual-art",
   Stallholder = "stallholder",
-  Volunteer = "volunteer",
+  // Volunteer = "volunteer",
   Other = "other",
 }
 
@@ -134,13 +134,13 @@ export default function Info() {
                       >
                         Stallholder
                       </option>
-                      <option
+                      {/* <option
                         value={FormReason.Volunteer}
                         className="text-white bg-black"
                         style={{ fontFamily: "sans-serif" }}
                       >
                         Volunteer
-                      </option>
+                      </option> */}
                       <option
                         value={FormReason.Other}
                         className="text-white bg-black"
@@ -259,7 +259,9 @@ export default function Info() {
                         </label>
                         <label className="block mt-4">
                           <span className="text-gray-100 font-mono">
-                            Details*
+                            {formReason === FormReason.Performance
+                              ? "Tell us about your performance*"
+                              : "Details*"}
                           </span>
                           <textarea
                             placeholder="Please include anything we would need to provide you - e.g. Equipment, Power, Water etc"
