@@ -1,8 +1,10 @@
+import getConfig from "next/config";
 import Head from "next/head";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ContentWrapper from "../components/ContentWrapper";
 import Layout from "../components/Layout";
+import ContactUsClosedMdx from "../content/contact-us-closed.mdx";
 import ContactUsErrorMdx from "../content/contact-us-error.mdx";
 import ContactUsIntroMdx from "../content/contact-us-intro.mdx";
 import ContactUsSubmittedMdx from "../content/contact-us-submitted.mdx";
@@ -21,16 +23,18 @@ enum FormReason {
   Workshops = "workshops",
   VisualArt = "visual-art",
   Stallholder = "stallholder",
-  // Volunteer = "volunteer",
+  Volunteer = "volunteer",
   Other = "other",
 }
 
 const orgNameMap = new Map<FormReason, string>();
-orgNameMap.set(FormReason.Performance, "Act name");
+orgNameMap.set(FormReason.Performance, "Act/DJ name");
 orgNameMap.set(FormReason.Workshops, "Workshop name");
 orgNameMap.set(FormReason.Stallholder, "Stall name");
 
 export default function Info() {
+  const { publicRuntimeConfig } = getConfig();
+
   const [formSubmitState, setFormSubmitState] = useState<
     "initial" | "loading" | "submitted" | "error"
   >("initial");
@@ -67,6 +71,21 @@ export default function Info() {
       })
       .catch((error) => console.log(error));
   };
+
+  if (!publicRuntimeConfig.contactEnabled) {
+    return (
+      <Layout>
+        <Head>
+          <title>Multiverse 2024 | Contact</title>
+        </Head>
+        <ContentWrapper>
+          <div className="w-fit  m-auto">
+            <ContactUsClosedMdx />
+          </div>
+        </ContentWrapper>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
@@ -111,7 +130,7 @@ export default function Info() {
                         className="text-white bg-black"
                         style={{ fontFamily: "sans-serif" }}
                       >
-                        Performance
+                        Performance/DJ
                       </option>
                       <option
                         value={FormReason.Workshops}
@@ -134,13 +153,13 @@ export default function Info() {
                       >
                         Stallholder
                       </option>
-                      {/* <option
+                      <option
                         value={FormReason.Volunteer}
                         className="text-white bg-black"
                         style={{ fontFamily: "sans-serif" }}
                       >
                         Volunteer
-                      </option> */}
+                      </option>
                       <option
                         value={FormReason.Other}
                         className="text-white bg-black"
@@ -264,7 +283,7 @@ export default function Info() {
                               : "Details*"}
                           </span>
                           <textarea
-                            placeholder="Please include anything we would need to provide you - e.g. Equipment, Power, Water etc"
+                            placeholder="Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc"
                             {...register("detailsRequired", { required: true })}
                             className={`font-mono font-light
                               mt-0
@@ -306,7 +325,7 @@ export default function Info() {
                                 focus:ring-0 focus:border-white
                               `}
                               rows={4}
-                              placeholder="Facebook, Instagram, etc."
+                              placeholder="Facebook, Instagram, Soundcloud, Mixcloud, etc."
                             ></textarea>
                           </label>
                         ) : null}

@@ -24,3 +24,7 @@
 .markdown ul {
   @apply space-y-1 text-gray-100 list-disc list-inside;
 }
+
+.markdown ul + p {
+  @apply pt-8;
+}

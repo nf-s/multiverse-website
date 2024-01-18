@@ -15,6 +15,15 @@ import YouTube from "react-youtube";
 const navigation = [
   { name: "About", href: "/#about" },
   {
+    name: "Getting There",
+    href: "/getting-there",
+    subItems: [
+      { name: "Location", href: "/getting-there" },
+      { name: "Gate Times", href: "/getting-there#gate-times" },
+      { name: "Site Map", href: "/getting-there#site-map" },
+    ],
+  },
+  {
     name: "Info",
     href: "/info",
     subItems: [
@@ -24,8 +33,9 @@ const navigation = [
       { name: "Festival Guidelines", href: "/info#festival-guidelines" },
       { name: "Core Festival Rules", href: "/info#core-festival-rules" },
       { name: "What To Bring", href: "/info#what-to-bring" },
+      { name: "Cash/EFTPOS", href: "/info#casheftpos" },
       { name: "Road Safety", href: "/info#road-safety" },
-      { name: "Sneak-ins policy", href: "/info#sneak-ins-policy" },
+      { name: "Sneak-ins Policy", href: "/info#sneak-ins-policy" },
       { name: "Conditions Of Entry", href: "/info#conditions-of-entry" },
     ],
   },
@@ -121,6 +131,16 @@ export default function Example(props: {
                   width={750}
                   height={100}
                 />
+                <h3
+                  className={`text-2xl md:text-3xl font-mono text-center leading-relaxed text-slate-50`}
+                >
+                  January 25 &mdash; 29
+                </h3>
+                <h3
+                  className={`text-xl md:text-2xl font-mono font-light text-center leading-relaxed text-slate-50`}
+                >
+                  Redbanks, Nugent, Tasmania
+                </h3>
               </div>
             </div>
           </>
@@ -224,11 +244,13 @@ export default function Example(props: {
                             className="absolute right-16 h-full"
                             onClick={() =>
                               setSubItemOpen(
-                                subItemOpen ? undefined : item.name
+                                subItemOpen === item.name
+                                  ? undefined
+                                  : item.name
                               )
                             }
                           >
-                            {subItemOpen ? (
+                            {subItemOpen === item.name ? (
                               <MinusIcon
                                 className="block h-6 w-6"
                                 aria-hidden="true"
