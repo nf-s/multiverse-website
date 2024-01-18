@@ -18,7 +18,7 @@ const navigation = [
     name: "Getting There",
     href: "/getting-there",
     subItems: [
-      { name: "Location", href: "/getting-there" },
+      { name: "Location", href: "/getting-there#location" },
       { name: "Gate Times", href: "/getting-there#gate-times" },
       { name: "Site Map", href: "/getting-there#site-map" },
     ],
