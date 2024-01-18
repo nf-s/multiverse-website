@@ -13,7 +13,7 @@ import { useState } from "react";
 import YouTube from "react-youtube";
 
 const navigation = [
-  { name: "About", href: "/#about" },
+  // { name: "About", href: "/#about" },
   {
     name: "Getting There",
     href: "/getting-there",
@@ -41,6 +41,7 @@ const navigation = [
   },
   { name: "Tickets", href: "/tickets" },
   { name: "Lineup", href: "/lineup" },
+  { name: "Set Times", href: "/set-times" },
   { name: "Contact", href: "/contact" },
 ];
 
