@@ -50,12 +50,6 @@ body {
   min-height: calc(100vh - 4rem);
 }
 
-@media (min-width: 768px) {
-  .md-h-screen-with-nav {
-    height: calc(100vh - 4rem);
-  }
-}
-
 .h-screen-with-nav {
   height: calc(100vh - 4rem);
 }

@@ -13,7 +13,7 @@ import { useState } from "react";
 import YouTube from "react-youtube";
 
 const navigation = [
-  // { name: "About", href: "/#about" },
+  { name: "About", href: "/#about" },
   {
     name: "Getting There",
     href: "/getting-there",
@@ -113,8 +113,8 @@ export default function Example(props: {
             />
 
             <div className="video-overlay bg-black bg-opacity-20"></div>
-            <div className="h-screen md-h-screen-with-nav w-screen flex flex-col justify-between">
-              <div className="flex flex-col flex-grow items-center gap-12 px-4 pt-24">
+            <div className="min-h-screen w-screen flex flex-col justify-between">
+              <div className="flex flex-col flex-grow items-center gap-12 px-4 pt-24 md:pt-36">
                 <Image
                   src="/images/logo.png"
                   alt="me"
@@ -138,7 +138,7 @@ export default function Example(props: {
                   January 25 &mdash; 29
                 </h3>
                 <h3
-                  className={`text-xl md:text-2xl font-mono font-light text-center leading-relaxed text-slate-50`}
+                  className={`text-xl md:text-2xl font-mono font-light text-center leading-relaxed text-slate-50 pb-16`}
                 >
                   Redbanks, Nugent, Tasmania
                 </h3>
@@ -150,9 +150,7 @@ export default function Example(props: {
         <Disclosure
           id="nav"
           as="nav"
-          className={`bg-gray-900 bg-opacity-30 backdrop-blur-lg fixed top-0 font-mono ${
-            props.showLanding ? "md:sticky" : ""
-          } md:flex md:justify-center w-screen z-10`}
+          className={`bg-gray-900 bg-opacity-30 backdrop-blur-lg fixed top-0 font-mono lg:flex lg:justify-center w-screen z-10`}
           style={{ pointerEvents: "all" }}
         >
           {({ open }) => (
@@ -169,7 +167,7 @@ export default function Example(props: {
                         />
                       </Link>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden lg:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
                           <Link
@@ -191,7 +189,7 @@ export default function Example(props: {
                       </div>
                     </div>
                   </div>
-                  <div className="-mr-2 flex md:hidden">
+                  <div className="-mr-2 flex lg:hidden">
                     {/* Mobile menu button */}
                     <Disclosure.Button
                       className="relative inline-flex items-center justify-center p-2 text-gray-100 hover:bg-opacity-30 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -225,7 +223,7 @@ export default function Example(props: {
 
               <Disclosure.Panel
                 id="nav-panel"
-                className={`md:hidden h-screen-with-nav overflow-y-auto`}
+                className={`lg:hidden h-screen-with-nav overflow-y-auto`}
               >
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col items-center gap-3">
                   {navigation.map((item) =>
