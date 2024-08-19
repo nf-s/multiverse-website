@@ -10,6 +10,9 @@ html {
 
 body {
   background: #111;
+  background-image: url("/images/placeholder-background.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .about-uppercase {

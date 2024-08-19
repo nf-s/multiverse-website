@@ -112,15 +112,15 @@ export default function Info() {
                         w-full
                         mt-0
                         px-0.5 bg-transparent
-                        border-0 border-b-2 border-gray-700
-                        focus:ring-0 focus:border-white
+                        border-0 border-b border-white border-opacity-70
+                        focus:ring-0 focus:border-white 
                       "
                     >
                       <option
                         value=""
                         disabled
                         selected
-                        className="text-white bg-black"
+                        className="text-white text-opacity-70 bg-black"
                         style={{ fontFamily: "sans-serif" }}
                       >
                         Select a reason
@@ -187,12 +187,12 @@ export default function Info() {
                               block
                               w-full
                               px-0.5 bg-transparent
-                              border-0 border-b-2 ${
+                              border-0 border-b ${
                                 errors.nameRequired
                                   ? "border-red-400"
-                                  : "border-gray-700"
+                                  : "border-white border-opacity-70"
                               }
-                              focus:ring-0 focus:border-white
+                              focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                             `}
                           />
                           {errors.nameRequired && (
@@ -216,8 +216,8 @@ export default function Info() {
                                 block
                                 w-full
                                 px-0.5 bg-transparent
-                                border-0 border-b-2 border-gray-700
-                                focus:ring-0 focus:border-white
+                                border-0 border-b border-white border-opacity-70
+                                focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                             `}
                             />
                           </label>
@@ -235,12 +235,12 @@ export default function Info() {
                               block
                               w-full
                               px-0.5 bg-transparent
-                              border-0 border-b-2 ${
+                              border-0 border-b ${
                                 errors.emailRequired
                                   ? "border-red-400"
-                                  : "border-gray-700"
+                                  : "border-white border-opacity-70"
                               }
-                              focus:ring-0 focus:border-white
+                              focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                             `}
                             placeholder="john@example.com"
                           />
@@ -262,12 +262,12 @@ export default function Info() {
                               block
                               w-full
                               px-0.5 bg-transparent
-                              border-0 border-b-2 ${
+                              border-0 border-b ${
                                 errors.phone
                                   ? "border-red-400"
-                                  : "border-gray-700"
+                                  : "border-white border-opacity-70"
                               }
-                              focus:ring-0 focus:border-white
+                              focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                           `}
                           />
                           {errors.phone && (
@@ -290,13 +290,13 @@ export default function Info() {
                               block
                               w-full
                               px-0.5 bg-transparent
-                              border-0 border-b-2 
+                              border-0 border-b 
                               ${
                                 errors.detailsRequired
                                   ? "border-red-400"
-                                  : "border-gray-700"
+                                  : "border-white border-opacity-70"
                               }
-                              focus:ring-0 focus:border-white
+                              focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                             `}
                             rows={4}
                           ></textarea>
@@ -321,8 +321,8 @@ export default function Info() {
                                 block
                                 w-full
                                 px-0.5 bg-transparent
-                                border-0 border-b-2                          
-                                focus:ring-0 focus:border-white
+                                border-0 border-b                          
+                                focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                               `}
                               rows={4}
                               placeholder="Facebook, Instagram, Soundcloud, Mixcloud, etc."

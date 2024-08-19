@@ -153,7 +153,7 @@ export default function Example(props: {
         <Disclosure
           id="nav"
           as="nav"
-          className={`bg-gray-900 bg-opacity-30 backdrop-blur-lg fixed top-0 font-mono lg:flex lg:justify-center w-screen z-10`}
+          className={`bg-black bg-opacity-20 backdrop-blur-lg fixed top-0 font-mono lg:flex lg:justify-center w-screen z-10`}
           style={{ pointerEvents: "all" }}
         >
           {({ open }) => (
@@ -311,7 +311,11 @@ export default function Example(props: {
         </Disclosure>
 
         <main
-          className={props.showLanding ? "" : "overflow-auto h-screen pt-16"}
+          className={
+            props.showLanding
+              ? ""
+              : "backdrop-blur-lg bg-black bg-opacity-70 overflow-auto h-screen pt-16"
+          }
         >
           {props.children}
         </main>
