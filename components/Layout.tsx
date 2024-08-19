@@ -137,7 +137,7 @@ export default function Example(props: {
                 <h3
                   className={`text-2xl md:text-3xl font-mono text-center leading-relaxed text-slate-50`}
                 >
-                  January 23 &mdash; 27
+                  January 23 &mdash; 26, 2025
                 </h3>
                 <h3
                   className={`text-xl md:text-2xl font-mono font-light text-center leading-relaxed text-slate-50 pb-16`}
