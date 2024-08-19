@@ -17,11 +17,11 @@ const navigation = [
   {
     name: "Getting There",
     href: "/getting-there",
-    subItems: [
-      { name: "Location", href: "/getting-there#location" },
-      { name: "Gate Times", href: "/getting-there#gate-times" },
-      { name: "Site Map", href: "/getting-there#site-map" },
-    ],
+    // subItems: [
+    //   { name: "Location", href: "/getting-there#location" },
+    //   { name: "Gate Times", href: "/getting-there#gate-times" },
+    //   { name: "Site Map", href: "/getting-there#site-map" },
+    // ],
   },
   {
     name: "Info",
@@ -41,13 +41,15 @@ const navigation = [
   },
   { name: "Tickets", href: "/tickets" },
   { name: "Lineup", href: "/lineup" },
-  { name: "Set Times", href: "/set-times" },
+  // { name: "Set Times", href: "/set-times" },
   { name: "Contact", href: "/contact" },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
+
+const VIDEO_ID = "uh4OZP7R9QM";
 
 export default function Example(props: {
   showLanding?: boolean;
@@ -61,15 +63,15 @@ export default function Example(props: {
   return (
     <>
       <Head>
-        <title>Multiverse 2024</title>
+        <title>Multiverse 2025</title>
       </Head>
       <div className="overflow-x-hidden">
         {props.showLanding ? (
           <>
             <div className="placeholder-background"></div>
             <YouTube
-              videoId={"C-ZCGF6nE58"}
-              loading={"lazy"}
+              videoId={VIDEO_ID}
+              loading={"eager"}
               className="video-container"
               style={{ opacity: showVideo ? 1 : 0 }}
               opts={{
@@ -83,7 +85,7 @@ export default function Example(props: {
                   autoplay: 1,
                   playsinline: 1,
                   loop: 1,
-                  playlist: "C-ZCGF6nE58",
+                  playlist: VIDEO_ID,
                 },
               }}
               onReady={(e) => {
@@ -135,7 +137,7 @@ export default function Example(props: {
                 <h3
                   className={`text-2xl md:text-3xl font-mono text-center leading-relaxed text-slate-50`}
                 >
-                  January 25 &mdash; 29
+                  January 23 &mdash; 27
                 </h3>
                 <h3
                   className={`text-xl md:text-2xl font-mono font-light text-center leading-relaxed text-slate-50 pb-16`}

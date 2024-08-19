@@ -7,7 +7,7 @@ export default function Info() {
   return (
     <Layout>
       <Head>
-        <title>Multiverse 2024 | Getting There</title>
+        <title>Multiverse 2025 | Getting There</title>
       </Head>
       <ContentWrapper>
         <GettingThereMdx />

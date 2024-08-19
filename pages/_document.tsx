@@ -29,7 +29,7 @@ export default function Document() {
         />
         <meta
           property="og:title"
-          content="Technobrats presents Multiverse 2024"
+          content="Technobrats presents Multiverse 2025"
         />
       </Head>
       <body>

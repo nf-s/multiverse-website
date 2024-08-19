@@ -7,7 +7,7 @@ export default function Tickets() {
   return (
     <Layout>
       <Head>
-        <title>Multiverse 2024 | Tickets</title>
+        <title>Multiverse 2025 | Tickets</title>
       </Head>
       <ContentWrapper>
         <TicketsMdx />

@@ -3,7 +3,7 @@
 }
 
 .markdown a {
-  @apply font-mono font-medium text-primary-300 hover:underline hover:underline;
+  @apply font-mono font-normal text-primary-300 hover:underline px-1;
 }
 
 .markdown p,

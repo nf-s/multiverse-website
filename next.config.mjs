@@ -9,7 +9,7 @@ const nextConfig = {
   images: { unoptimized: true },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   publicRuntimeConfig: {
-    contactEnabled: false,
+    contactEnabled: true,
   },
 };
 

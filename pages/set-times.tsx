@@ -7,7 +7,7 @@ export default function Lineup() {
   return (
     <Layout>
       <Head>
-        <title>Multiverse 2024 | Set Times</title>
+        <title>Multiverse 2025 | Set Times</title>
       </Head>
       <ContentWrapper>
         <SetTimesMdx />

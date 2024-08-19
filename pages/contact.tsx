@@ -1,7 +1,7 @@
 import getConfig from "next/config";
 import Head from "next/head";
 import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { set, SubmitHandler, useForm } from "react-hook-form";
 import ContentWrapper from "../components/ContentWrapper";
 import Layout from "../components/Layout";
 import ContactUsClosedMdx from "../content/contact-us-closed.mdx";
@@ -50,17 +50,14 @@ export default function Info() {
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     setFormSubmitState("loading");
-    // turn data into FormData
-    const formData = new FormData();
-    Object.keys(data).forEach((key) => formData.append(key, data[key]));
-    if (formReason) formData.append("why", formReason.toString());
 
-    fetch("https://usebasin.com/f/88247cd2f6e6", {
+    fetch("https://submit-form.com/yeMbzyzGN", {
       method: "POST",
       headers: {
+        "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: formData,
+      body: JSON.stringify({ ...data, why: formReason }),
     })
       .then((response) => {
         if (response.status === 200) {
@@ -69,17 +66,20 @@ export default function Info() {
           setFormSubmitState("error");
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        setFormSubmitState("error");
+        console.error(error);
+      });
   };
 
   if (!publicRuntimeConfig.contactEnabled) {
     return (
       <Layout>
         <Head>
-          <title>Multiverse 2024 | Contact</title>
+          <title>Multiverse 2025 | Contact</title>
         </Head>
         <ContentWrapper>
-          <div className="w-fit  m-auto">
+          <div className="w-fits m-auto">
             <ContactUsClosedMdx />
           </div>
         </ContentWrapper>
@@ -90,10 +90,10 @@ export default function Info() {
   return (
     <Layout>
       <Head>
-        <title>Multiverse 2024 | Contact</title>
+        <title>Multiverse 2025 | Contact</title>
       </Head>
       <ContentWrapper>
-        <div className="w-fit  m-auto">
+        <div>
           {/* Show form for initial state */}
           {formSubmitState === "initial" ? (
             <>
