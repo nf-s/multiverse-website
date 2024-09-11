@@ -27,10 +27,33 @@ enum FormReason {
   Other = "other",
 }
 
-const orgNameMap = new Map<FormReason, string>();
-orgNameMap.set(FormReason.Performance, "Act/DJ name");
-orgNameMap.set(FormReason.Workshops, "Workshop name");
-orgNameMap.set(FormReason.Stallholder, "Stall name");
+const organisationName = {
+  [FormReason.Performance]: "Act/DJ name",
+  [FormReason.Workshops]: "Workshop name",
+  [FormReason.Stallholder]: "Stall name",
+};
+
+const detailsName = {
+  [FormReason.Performance]: "Tell us about your performance*",
+  [FormReason.Workshops]: "Tell us about your workshop*",
+  [FormReason.VisualArt]: "Tell us about your art*",
+  [FormReason.Stallholder]: "Tell us about your stall*",
+  [FormReason.Volunteer]: "Tell us about yourself and your experiences*",
+  [FormReason.Other]: "Tell us about your enquiry*",
+};
+
+const detailsDescription = {
+  [FormReason.Performance]:
+    "Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc",
+  [FormReason.Workshops]:
+    "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
+  [FormReason.VisualArt]:
+    "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
+  [FormReason.Stallholder]:
+    "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
+  [FormReason.Volunteer]: "",
+  [FormReason.Other]: "",
+};
 
 export default function Info() {
   const { publicRuntimeConfig } = getConfig();
@@ -206,7 +229,7 @@ export default function Info() {
                         formReason === FormReason.Stallholder ? (
                           <label className="block">
                             <span className="text-gray-100 font-mono">
-                              {orgNameMap.get(formReason) ??
+                              {organisationName[formReason] ??
                                 "Organisation Name"}
                             </span>
                             <input
@@ -278,12 +301,10 @@ export default function Info() {
                         </label>
                         <label className="block mt-4">
                           <span className="text-gray-100 font-mono">
-                            {formReason === FormReason.Performance
-                              ? "Tell us about your performance*"
-                              : "Tell us about yourself and your experiences*"}
+                            {detailsName[formReason] ?? "Details*"}
                           </span>
                           <textarea
-                            placeholder="Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc"
+                            placeholder={detailsDescription[formReason]}
                             {...register("detailsRequired", { required: true })}
                             className={`font-mono font-light
                               mt-0
