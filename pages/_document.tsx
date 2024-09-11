@@ -31,6 +31,11 @@ export default function Document() {
           property="og:title"
           content="Technobrats presents Multiverse 2025"
         />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f7335984-c207-4b00-a12c-8120ae728b43"
+        ></script>
       </Head>
       <body>
         <Main />
