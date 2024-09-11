@@ -280,7 +280,7 @@ export default function Info() {
                           <span className="text-gray-100 font-mono">
                             {formReason === FormReason.Performance
                               ? "Tell us about your performance*"
-                              : "Details*"}
+                              : "Tell us about yourself and your experiences*"}
                           </span>
                           <textarea
                             placeholder="Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc"
