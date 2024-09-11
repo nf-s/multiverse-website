@@ -116,11 +116,23 @@ export default function Info() {
         <title>Multiverse 2025 | Contact</title>
       </Head>
       <ContentWrapper>
+        <h1>Contact Us</h1>
         <div>
+          {/* Show for error state */}
+          {formSubmitState === "error" && (
+            <div
+              className=" bg-rose-600 bg-opacity-50 px-4 pb-4 relative"
+              role="alert"
+            >
+              <ContactUsErrorMdx />
+            </div>
+          )}
+
+          {formSubmitState === "initial" && <ContactUsIntroMdx />}
+
           {/* Show form for initial state */}
-          {formSubmitState === "initial" ? (
+          {formSubmitState === "initial" || formSubmitState === "error" ? (
             <>
-              <ContactUsIntroMdx />
               <div className="pt-12">
                 <div className="mt-8 max-w-md">
                   <label className="block">
@@ -363,9 +375,6 @@ export default function Info() {
               ) : null}
             </>
           ) : null}
-
-          {/* Show for error state */}
-          {formSubmitState === "error" ? <ContactUsErrorMdx /> : null}
 
           {/* Show for submitted state */}
           {formSubmitState === "submitted" ? <ContactUsSubmittedMdx /> : null}
