@@ -151,7 +151,7 @@ export default function Example(props: {
               <a
                 target="_blank"
                 href="https://www.facebook.com/antichristhari"
-                className={`placeholder-attribution fixed bottom-4 right-4 text-2xl font-thin font-mono ${
+                className={`placeholder-attribution fixed bottom-4 right-4 text-md md:text-2xl font-thin font-mono ${
                   showVideo ? "opacity-0 pointer-events-none" : "opacity-100"
                 }`}
               >
