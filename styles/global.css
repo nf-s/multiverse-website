@@ -36,6 +36,10 @@ body {
   @apply transition-opacity duration-1000;
 }
 
+.placeholder-attribution {
+  @apply transition-opacity duration-1000;
+}
+
 .video-container iframe {
   position: absolute;
   top: 50%;

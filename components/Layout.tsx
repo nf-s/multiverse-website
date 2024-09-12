@@ -147,6 +147,17 @@ export default function Example(props: {
                 </h3>
               </div>
             </div>
+            {
+              <a
+                target="_blank"
+                href="https://www.facebook.com/antichristhari"
+                className={`placeholder-attribution fixed bottom-4 right-4 text-2xl font-thin font-mono ${
+                  showVideo ? "opacity-0 pointer-events-none" : "opacity-100"
+                }`}
+              >
+                Photo by Hari Prasad
+              </a>
+            }
           </>
         ) : null}
 
