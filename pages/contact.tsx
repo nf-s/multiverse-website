@@ -72,36 +72,39 @@ export default function Info() {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setFormSubmitState("loading");
 
-    const payload = { ...data, why: formReason };
+    try {
+      const payload = { ...data, why: formReason };
 
-    fetch("https://submit-form.com/yeMbzyzGNssss", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          setFormSubmitState("submitted");
-        } else {
-          setFormSubmitState("error");
-        }
-      })
-      .catch((error) => {
-        setFormSubmitState("error");
-        console.error(error);
-        Sentry.captureException(error, {
-          tags: {
-            component: "ContactForm",
-            data: JSON.stringify(payload),
-          },
-        });
+      const response = await fetch("https://submit-form.com/yeMbzyzGN", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
       });
+
+      if (response.status === 200) {
+        setFormSubmitState("submitted");
+      } else {
+        throw new Error(
+          `Failed to submit form: ${await response.text()} (${
+            response.statusText
+          })`
+        );
+      }
+    } catch (error) {
+      setFormSubmitState("error");
+      console.error(error);
+      Sentry.captureException(error, {
+        tags: {
+          component: "ContactForm",
+        },
+      });
+    }
   };
 
   if (!publicRuntimeConfig.contactEnabled) {
