@@ -26,7 +26,7 @@ export default withSentryConfig(withMDX(nextConfig), {
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
   org: "n-forbes-smith",
-  project: "javascript-nextjs",
+  project: "technobrats-multiverse",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,

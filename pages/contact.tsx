@@ -1,7 +1,8 @@
+import * as Sentry from "@sentry/react";
 import getConfig from "next/config";
 import Head from "next/head";
 import { useState } from "react";
-import { set, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import ContentWrapper from "../components/ContentWrapper";
 import Layout from "../components/Layout";
 import ContactUsClosedMdx from "../content/contact-us-closed.mdx";
@@ -74,13 +75,15 @@ export default function Info() {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     setFormSubmitState("loading");
 
-    fetch("https://submit-form.com/yeMbzyzGN", {
+    const payload = { ...data, why: formReason };
+
+    fetch("https://submit-form.com/yeMbzyzGNssss", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({ ...data, why: formReason }),
+      body: JSON.stringify(payload),
     })
       .then((response) => {
         if (response.status === 200) {
@@ -92,6 +95,12 @@ export default function Info() {
       .catch((error) => {
         setFormSubmitState("error");
         console.error(error);
+        Sentry.captureException(error, {
+          tags: {
+            component: "ContactForm",
+            data: JSON.stringify(payload),
+          },
+        });
       });
   };
 
