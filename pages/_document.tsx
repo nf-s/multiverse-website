@@ -1,6 +1,9 @@
+import getConfig from "next/config";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
+  const { publicRuntimeConfig } = getConfig();
+
   return (
     <Html lang="en">
       <Head>
@@ -34,7 +37,7 @@ export default function Document() {
         <script
           defer
           src="https://cloud.umami.is/script.js"
-          data-website-id="f7335984-c207-4b00-a12c-8120ae728b43"
+          data-website-id={publicRuntimeConfig.UMAMI_WEBSITE_ID}
         ></script>
       </Head>
       <body>
