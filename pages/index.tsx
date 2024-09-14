@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <Layout showLanding>
       <a id="about" type="hidden"></a>
-      <div className="min-h-screen md:flex md:items-center py-6 sm:px-6 lg:px-8 backdrop-blur-lg">
+      <div className="min-h-screen md:flex md:items-center py-6 sm:px-6 lg:px-8 backdrop-blur-with-fallback">
         <div className="mx-auto max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
           <div
             className={`divide-y text-white text-center md:leading-relaxed px-4 py-6 sm:px-6 lg:px-8 $ font-mono`}

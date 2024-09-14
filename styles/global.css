@@ -60,3 +60,13 @@ body {
 .h-screen-with-nav {
   height: calc(100vh - 4rem);
 }
+
+.backdrop-blur-with-fallback {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@supports (backdrop-filter: blur()) {
+  .backdrop-blur-with-fallback {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+  }
+}

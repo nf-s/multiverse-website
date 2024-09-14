@@ -4,7 +4,7 @@ import router from "next/router";
 
 const CustomErrorComponent = (props: any) => {
   return (
-    <div className="backdrop-blur bg-black bg-opacity-30 h-screen w-screen flex flex-col items-center justify-center lg:px-2 xl:px-0 text-center">
+    <div className="backdrop-blur-with-fallback h-screen w-screen flex flex-col items-center justify-center lg:px-2 xl:px-0 text-center">
       <p className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider">
         {props.statusCode}
       </p>

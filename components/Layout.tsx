@@ -164,7 +164,7 @@ export default function Example(props: {
         <Disclosure
           id="nav"
           as="nav"
-          className={`bg-black bg-opacity-20 backdrop-blur-lg fixed top-0 font-mono lg:flex lg:justify-center w-screen z-10`}
+          className={`backdrop-blur-with-fallback fixed top-0 font-mono lg:flex lg:justify-center w-screen z-10`}
           style={{ pointerEvents: "all" }}
         >
           {({ open }) => (
