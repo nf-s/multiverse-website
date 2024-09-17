@@ -15,6 +15,10 @@ const nextConfig = {
   },
 };
 
+if (!process.env.UMAMI_WEBSITE_ID) {
+  throw new Error("UMAMI_WEBSITE_ID must be set");
+}
+
 const withMDX = createMDX({
   extension: /\.mdx?$/,
 
