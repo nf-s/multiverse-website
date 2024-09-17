@@ -58,6 +58,11 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.json') }}-
       - name: Install dependencies
         run: pnpm install
+      - name: create env file
+        run: |
+          touch .env
+          echo UMAMI_WEBSITE_ID=${{ secrets.UMAMI_WEBSITE_ID }} >> .env
+          echo SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }} >> .env
       - name: Build with Next.js
         run: pnpm run build
       - name: Upload artifact
