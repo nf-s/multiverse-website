@@ -42,6 +42,7 @@ export default function LineupDialog({
       autoFocus
       onFocus={() => {
         if (hasScrolledToArtist === selectedArtist?.["ARTIST NAME"]) return;
+        panelRef.current?.scrollTo(0, 0);
         setTimeout(() => {
           panelRef.current?.scrollTo(0, 0);
         }, 0);
