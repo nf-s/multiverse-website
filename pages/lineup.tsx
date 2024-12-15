@@ -121,11 +121,11 @@ export default function Lineup() {
         <LineupIntroMdx />
         <h2>First Announcement</h2>
 
-        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {lineup.map((artist) => (
             <button
               key={artist["ARTIST NAME"]}
-              className="p-4 md:hover:underline lineup-card flex flex-col justify-center items-center"
+              className="px-4 py-8 md:hover:underline lineup-card flex flex-col justify-center items-center"
               onClick={() => setSelectedArtist(artist)}
             >
               <ExportedImage
