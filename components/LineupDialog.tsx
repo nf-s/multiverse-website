@@ -1,10 +1,10 @@
 import { Dialog } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import { SocialIcon } from "react-social-icons";
 import { Artist } from "../pages/lineup";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function LineupDialog({
   selectedArtist,

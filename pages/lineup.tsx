@@ -25,14 +25,7 @@ const lineup: Artist[] = [
     INSTAGRAM: "https://www.instagram.com/bayawaka.golanski/ ",
     SOUNDCLOUD: "https://soundcloud.com/djbayawaka ",
   },
-  {
-    "ARTIST NAME": "Golanski",
-    BIO: "Golanski holds the flow steady, delivering deep, dark and hypnotic performances of progressive techno and trance. Bearing the title of Label DJ for Zenon Records and Digital Structures, Golanski explores these label’s immense catalogues and beyond.\n\nBorn in Tel Aviv, the nomadic sonic warrior is now based in Berlin, though constantly driven to travel and express himself to the dancefloors of the globe. The Golanski project has featured at Ozora, Mo:dem, Universo Paralello, Fusion, Tribal Gathering, Esoteric, Earth Frequency, Rabbits Eat Lettuce, Wild Horses, Bucht Der Traumer and closed the famed Hammahalle main room at Sisyphos Berlin.\n\nA multi-disciplinary creative, Golan has founded boundary-pushing event platforms, catalyzed compilation releases for hallowed labels (including Digital Structures) and taken to the studios with Captain Hook, Mad Zach, Dekel and Gumi.",
-    "ARTWORK COMPLETED": "YES",
-    FACEBOOK: "https://www.facebook.com/DJGolanski ",
-    INSTAGRAM: "https://www.instagram.com/bayawaka.golanski/ ",
-    SOUNDCLOUD: "https://soundcloud.com/golanskidj ",
-  },
+
   {
     "ARTIST NAME": "Terrafractyl",
     BIO: "Felix Greenlees, aka Terrafractyl, was raised on a diet of classical music, opera and jazz. Trained as a bassoon player, Felix worked for the Tasmanian and Melbourne Symphony Orchestras as well as freelancing for Opera Australia between 1999-2004.\n\nAt some point in the late 90s Felix had found his way to an outdoor goa trance party in Tasmania, was completely captivated by the psychedelic music he heard there and couldn’t resist trying his hand at electronic music production. Since then, he has been weaving the threads of psytrance, jazz and classical music together, incorporating his love/addiction of piano and a new found addiction for building analog synthesizers. This unique melding of styles quickly led him to become one of Australia’s most prominent electronic music performers.\n\nIn 2013 Felix established his own record label Kinematic Records, to help further his vision for psychedelic music, and for promoting and releasing music from many innovative and unique psychedelic musicians from Australia and around the world.",
@@ -42,15 +35,7 @@ const lineup: Artist[] = [
     SOUNDCLOUD: "https://soundcloud.com/terrafractyl",
     OTHER: "",
   },
-  {
-    "ARTIST NAME": "Hypnagog",
-    BIO: "Hypnagog is a musical project of Felix Fractal aka Terrafractyl and Mental Extensions.\n\nAfter years of writing Psychedelic dance music and experimenting with plenty of other sonic forms, Felix started to spend more time listening to downtempo, psychedelic breaks, IDM and the like. It was time to combine these styles with his own to create some kind of hybrid, beat driven, yet melodic sound. As the project has progressed, Felix has also been experimenting with a kind of jazzy progressive trance and has been working to combine these 2 styles into what could maybe be described as Psychedelic ProgStep. As always, his music is hard to describe and difficult to put into boxes and has been surprising and exhilarating audiences around the world for the past couple of years.\n\nHe has released two EP's on UP records , 'Dreaming in Pieces' (2009) and 'Gyroscopic Bebop'(2010) , and in 2012 another EP, ‘Infinite Vibrations’ on Adapted records. Most Recently, Felix released the debut Hypnagog album, 'Thematic Mathematics', on his own label Kinematic Records. This album represents the last 3 years of Felix's Hypnagogical experimentation, all wrapped up and woven into an intricate and very unique 80 minutes of sonic vibrations.",
-    "ARTWORK COMPLETED": "YES",
-    FACEBOOK: "https://www.facebook.com/Terrafractyl",
-    INSTAGRAM: "",
-    SOUNDCLOUD: "https://soundcloud.com/hypnagog",
-    OTHER: "",
-  },
+
   {
     "ARTIST NAME": "0dB",
     BIO: "Emerging from Cape Town and now rooted in the Central Coast of Australia, 0dB stands as a formidable DJ and producer signed to the reputable Furthur Progressions Records crew.\n\nHis journey through psytrance has seen him play his immersive soundscapes & rhythms across South Africa, England, Wales, Portugal, Indonesia, Thailand, and the unique terrains of Australia and New Zealand.\n\nHe has a growing portfolio of releases, seen in the company of esteemed figures such as Ninesense, Radikal Moodz, Oxyflux, Shadow Shaman, Dribble, Unexpected, Ace Ventura, Antix, Burn in Noise, Avalon, and more.\n\n0dB's unique sound palette is laden with groovy, nocturnal, and psychedelically soaked frequencies that are sonically charged with explosive energy. He looks forward to gracing our stage and taking us on a transcendent journey.\n",
@@ -67,6 +52,23 @@ const lineup: Artist[] = [
     FACEBOOK: "https://www.facebook.com/RDJZero1",
     INSTAGRAM: "https://www.instagram.com/renegade_dj/ ",
     SOUNDCLOUD: "https://soundcloud.com/renegadedj ",
+    OTHER: "",
+  },
+  {
+    "ARTIST NAME": "Golanski",
+    BIO: "Golanski holds the flow steady, delivering deep, dark and hypnotic performances of progressive techno and trance. Bearing the title of Label DJ for Zenon Records and Digital Structures, Golanski explores these label’s immense catalogues and beyond.\n\nBorn in Tel Aviv, the nomadic sonic warrior is now based in Berlin, though constantly driven to travel and express himself to the dancefloors of the globe. The Golanski project has featured at Ozora, Mo:dem, Universo Paralello, Fusion, Tribal Gathering, Esoteric, Earth Frequency, Rabbits Eat Lettuce, Wild Horses, Bucht Der Traumer and closed the famed Hammahalle main room at Sisyphos Berlin.\n\nA multi-disciplinary creative, Golan has founded boundary-pushing event platforms, catalyzed compilation releases for hallowed labels (including Digital Structures) and taken to the studios with Captain Hook, Mad Zach, Dekel and Gumi.",
+    "ARTWORK COMPLETED": "YES",
+    FACEBOOK: "https://www.facebook.com/DJGolanski ",
+    INSTAGRAM: "https://www.instagram.com/bayawaka.golanski/ ",
+    SOUNDCLOUD: "https://soundcloud.com/golanskidj ",
+  },
+  {
+    "ARTIST NAME": "Hypnagog",
+    BIO: "Hypnagog is a musical project of Felix Fractal aka Terrafractyl and Mental Extensions.\n\nAfter years of writing Psychedelic dance music and experimenting with plenty of other sonic forms, Felix started to spend more time listening to downtempo, psychedelic breaks, IDM and the like. It was time to combine these styles with his own to create some kind of hybrid, beat driven, yet melodic sound. As the project has progressed, Felix has also been experimenting with a kind of jazzy progressive trance and has been working to combine these 2 styles into what could maybe be described as Psychedelic ProgStep. As always, his music is hard to describe and difficult to put into boxes and has been surprising and exhilarating audiences around the world for the past couple of years.\n\nHe has released two EP's on UP records , 'Dreaming in Pieces' (2009) and 'Gyroscopic Bebop'(2010) , and in 2012 another EP, ‘Infinite Vibrations’ on Adapted records. Most Recently, Felix released the debut Hypnagog album, 'Thematic Mathematics', on his own label Kinematic Records. This album represents the last 3 years of Felix's Hypnagogical experimentation, all wrapped up and woven into an intricate and very unique 80 minutes of sonic vibrations.",
+    "ARTWORK COMPLETED": "YES",
+    FACEBOOK: "https://www.facebook.com/Terrafractyl",
+    INSTAGRAM: "",
+    SOUNDCLOUD: "https://soundcloud.com/hypnagog",
     OTHER: "",
   },
   {

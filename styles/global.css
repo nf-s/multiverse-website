@@ -72,17 +72,15 @@ body {
   }
 }
 
-@media (min-width: 768px) {
-  .lineup-image-greyscale {
-    mix-blend-mode: screen;
-    -webkit-filter: grayscale(100%) contrast(100%);
-    filter: grayscale(100%) contrast(100%);
-  }
+.lineup-image-greyscale {
+  mix-blend-mode: screen;
+  -webkit-filter: grayscale(100%) contrast(100%);
+  filter: grayscale(100%) contrast(100%);
+}
 
-  .lineup-card:hover .lineup-image-greyscale {
-    -webkit-filter: grayscale(0%) contrast(110%);
-    filter: grayscale(0%) contrast(110%);
-  }
+.lineup-card:hover .lineup-image-greyscale {
+  -webkit-filter: grayscale(0%) contrast(110%);
+  filter: grayscale(0%) contrast(110%);
 }
 
 a {
