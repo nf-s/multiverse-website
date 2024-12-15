@@ -42,14 +42,16 @@ export default function LineupDialog({
       autoFocus
       onFocus={() => {
         if (hasScrolledToArtist === selectedArtist?.["ARTIST NAME"]) return;
-        panelRef.current?.scrollTo(0, 0);
+        setTimeout(() => {
+          panelRef.current?.scrollTo(0, 0);
+        }, 0);
         setHasScrolledToArtist(selectedArtist?.["ARTIST NAME"] ?? null);
       }}
     >
-      <div className="fixed inset-0 flex w-screen items-center justify-center p-4 backdrop-blur-sm">
+      <div className="fixed inset-0 flex w-screen items-center justify-center sm:p-4 backdrop-blur-sm">
         <Dialog.Panel
           ref={panelRef}
-          className={`max-h-full md:max-w-3xl space-y-4 bg-slate-900 backdrop-blur bg-opacity-90 text-white p-12 flex flex-col items-center overflow-y-auto`}
+          className={`max-h-full max-w-full md:max-w-3xl space-y-4 bg-slate-900 backdrop-blur bg-opacity-90 text-white p-12 flex flex-col items-center overflow-y-auto`}
           onScroll={(event) => {}}
         >
           <Dialog.Backdrop className="fixed inset-0 bg-black opacity-30" />
@@ -62,7 +64,7 @@ export default function LineupDialog({
                 width={300}
                 height={300}
               />
-              <div>
+              <div className="w-full">
                 <a hidden id="lineup-dialog-top-anchor"></a>
                 <h1 className="text-center font-light font-mono text-primary-300">
                   {selectedArtist?.["ARTIST NAME"]}
