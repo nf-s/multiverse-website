@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import { SocialIcon } from "react-social-icons";
 import { Artist } from "../pages/lineup";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function LineupDialog({
   selectedArtist,
@@ -56,6 +57,13 @@ export default function LineupDialog({
           onScroll={(event) => {}}
         >
           <Dialog.Backdrop className="fixed inset-0 bg-black opacity-30" />
+
+          <XMarkIcon
+            width={36}
+            height={36}
+            className="absolute top-4 right-4  text-primary-500 cursor-pointer"
+            onClick={() => setSelectedArtist(null)}
+          />
 
           {selectedArtist ? (
             <>
