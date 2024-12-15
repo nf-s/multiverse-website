@@ -16,10 +16,21 @@ const roboto = Roboto({
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <main
-      className={`${roboto.variable} ${robotoMonoFont.variable} font-sans text-white `}
-    >
-      <Component {...pageProps} />
-    </main>
+    <>
+      <style jsx global>{`
+        html {
+          font-family: ${roboto.style.fontFamily};
+        }
+
+        .font-mono {
+          font-family: ${robotoMonoFont.style.fontFamily};
+        }
+      `}</style>
+      <main
+        className={`${roboto.variable} ${robotoMonoFont.variable} font-sans text-white `}
+      >
+        <Component {...pageProps} />
+      </main>
+    </>
   );
 }

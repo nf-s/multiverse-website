@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  @apply text-lg leading-relaxed;
   background: #111;
   background-image: url("/images/placeholder-background.jpg");
   background-position: 50% 50%;
@@ -69,4 +70,44 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(16px);
   }
+}
+
+@media (min-width: 768px) {
+  .lineup-image-greyscale {
+    mix-blend-mode: screen;
+    -webkit-filter: grayscale(100%) contrast(100%);
+    filter: grayscale(100%) contrast(100%);
+  }
+
+  .lineup-card:hover .lineup-image-greyscale {
+    -webkit-filter: grayscale(0%) contrast(110%);
+    filter: grayscale(0%) contrast(110%);
+  }
+}
+
+a {
+  @apply font-mono font-normal text-primary-200 underline px-1;
+}
+
+p,
+ul,
+ol,
+blockquote {
+  @apply pt-4 text-base md:text-lg font-normal lg:text-xl text-gray-100;
+}
+
+h1 {
+  @apply text-primary-500 pb-8 text-5xl md:text-6xl font-extrabold leading-none tracking-tight font-mono;
+}
+
+h2 {
+  @apply text-primary-400 pt-16 text-2xl md:text-3xl font-bold leading-none tracking-tight font-mono;
+}
+
+ul {
+  @apply space-y-1 text-gray-100 list-disc list-inside;
+}
+
+ul + p {
+  @apply pt-8;
 }

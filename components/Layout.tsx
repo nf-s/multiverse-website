@@ -5,6 +5,7 @@ import {
   PlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import ExportedImage from "next-image-export-optimizer";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -117,7 +118,7 @@ export default function Example(props: {
             <div className="video-overlay bg-black bg-opacity-20"></div>
             <div className="min-h-screen w-screen flex flex-col justify-between">
               <div className="flex flex-col flex-grow items-center gap-12 px-4 pt-24 md:pt-36 ">
-                <Image
+                <ExportedImage
                   src="/images/logo.png"
                   alt="me"
                   width={250}
@@ -129,7 +130,7 @@ export default function Example(props: {
                 >
                   presents
                 </h3>
-                <Image
+                <ExportedImage
                   src="/images/multiverse-logo.png"
                   alt="me"
                   width={750}
@@ -191,7 +192,7 @@ export default function Example(props: {
                               router.asPath === item.href
                                 ? " text-white border-b-2 border-primary-base"
                                 : "text-gray-300  hover:text-primary-base",
-                              "px-3 py-2 text-md font-medium"
+                              "px-3 py-2 text-md font-medium no-underline"
                             )}
                             aria-current={
                               router.asPath === item.href ? "page" : undefined
@@ -248,7 +249,7 @@ export default function Example(props: {
                             as="a"
                             href={item.href}
                             className={
-                              "text-gray-100 hover:text-white px-3 py-3 font-medium text-xl font-mono text-center"
+                              "text-gray-100 hover:text-white px-3 py-3 font-medium text-xl font-mono text-center no-underline"
                             }
                           >
                             {item.name}
@@ -293,7 +294,7 @@ export default function Example(props: {
                                 as="a"
                                 href={subItem.href}
                                 className={
-                                  "text-gray-100 hover:text-white px-3 py-2 font-light text-lg font-mono text-center"
+                                  "text-gray-100 hover:text-white px-3 py-2 font-light text-lg font-mono text-center no-underline"
                                 }
                               >
                                 {subItem.name}
@@ -308,7 +309,7 @@ export default function Example(props: {
                         as="a"
                         href={item.href}
                         className={
-                          "text-gray-100 hover:text-white px-3 py-3 font-medium text-xl font-mono text-center w-fit"
+                          "text-gray-100 hover:text-white px-3 py-3 font-medium text-xl font-mono text-center w-fit no-underline"
                         }
                       >
                         {item.name}

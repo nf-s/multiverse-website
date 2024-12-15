@@ -38,3 +38,6 @@ next-env.d.ts
 .env.sentry-build-plugin
 
 .env
+
+nextImageExportOptimizer/
+next-image-export-optimizer-hashes.json
