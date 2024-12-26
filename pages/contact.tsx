@@ -21,7 +21,7 @@ type Inputs = {
 
 enum FormReason {
   Performance = "performance",
-  Workshops = "workshops",
+  // Workshops = "workshops",
   VisualArt = "visual-art",
   Stallholder = "stallholder",
   Volunteer = "volunteer",
@@ -30,13 +30,13 @@ enum FormReason {
 
 const organisationName = {
   [FormReason.Performance]: "Act/DJ name",
-  [FormReason.Workshops]: "Workshop name",
+  // [FormReason.Workshops]: "Workshop name",
   [FormReason.Stallholder]: "Stall name",
 };
 
 const detailsName = {
   [FormReason.Performance]: "Tell us about your performance*",
-  [FormReason.Workshops]: "Tell us about your workshop*",
+  // [FormReason.Workshops]: "Tell us about your workshop*",
   [FormReason.VisualArt]: "Tell us about your art*",
   [FormReason.Stallholder]: "Tell us about your stall*",
   [FormReason.Volunteer]: "Tell us about yourself and your experiences*",
@@ -46,8 +46,8 @@ const detailsName = {
 const detailsDescription = {
   [FormReason.Performance]:
     "Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc",
-  [FormReason.Workshops]:
-    "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
+  // [FormReason.Workshops]:
+  //   "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
   [FormReason.VisualArt]:
     "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
   [FormReason.Stallholder]:
@@ -179,13 +179,13 @@ export default function Info() {
                       >
                         Performance/DJ
                       </option>
-                      <option
+                      {/* <option
                         value={FormReason.Workshops}
                         className="text-white bg-black"
                         style={{ fontFamily: "sans-serif" }}
                       >
                         Workshops
-                      </option>
+                      </option> */}
                       <option
                         value={FormReason.VisualArt}
                         className="text-white bg-black"
@@ -249,7 +249,7 @@ export default function Info() {
                           )}
                         </label>
                         {formReason === FormReason.Performance ||
-                        formReason === FormReason.Workshops ||
+                        // formReason === FormReason.Workshops ||
                         formReason === FormReason.Stallholder ? (
                           <label className="block">
                             <span className="text-gray-100 font-mono">
@@ -353,7 +353,7 @@ export default function Info() {
                         </label>
                         {formReason === FormReason.Performance ||
                         formReason === FormReason.VisualArt ||
-                        formReason === FormReason.Workshops ||
+                        // formReason === FormReason.Workshops ||
                         formReason === FormReason.Stallholder ? (
                           <label className="block mt-4">
                             <span className="text-gray-100 font-mono">
