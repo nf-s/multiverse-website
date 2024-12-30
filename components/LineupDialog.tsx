@@ -93,6 +93,9 @@ export default function LineupDialog({
               {selectedArtist?.SOUNDCLOUD ? (
                 <SocialIcon url={selectedArtist?.SOUNDCLOUD} target="_blank" />
               ) : null}
+              {selectedArtist?.OTHER ? (
+                <SocialIcon url={selectedArtist?.OTHER} target="_blank" />
+              ) : null}
             </div>
             <button
               className="text-primary-500 uppercase"
