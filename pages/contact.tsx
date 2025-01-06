@@ -20,7 +20,7 @@ type Inputs = {
 };
 
 enum FormReason {
-  Performance = "performance",
+  // Performance = "performance",
   // Workshops = "workshops",
   VisualArt = "visual-art",
   Stallholder = "stallholder",
@@ -29,13 +29,13 @@ enum FormReason {
 }
 
 const organisationName = {
-  [FormReason.Performance]: "Act/DJ name",
+  // [FormReason.Performance]: "Act/DJ name",
   // [FormReason.Workshops]: "Workshop name",
   [FormReason.Stallholder]: "Stall name",
 };
 
 const detailsName = {
-  [FormReason.Performance]: "Tell us about your performance*",
+  // [FormReason.Performance]: "Tell us about your performance*",
   // [FormReason.Workshops]: "Tell us about your workshop*",
   [FormReason.VisualArt]: "Tell us about your art*",
   [FormReason.Stallholder]: "Tell us about your stall*",
@@ -44,8 +44,8 @@ const detailsName = {
 };
 
 const detailsDescription = {
-  [FormReason.Performance]:
-    "Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc",
+  // [FormReason.Performance]:
+  //   "Please include anything we would need to provide you - e.g. DJ Equipment, Power, Water etc",
   // [FormReason.Workshops]:
   //   "Please include anything we would need to provide you - e.g. Lighting, Power, Water etc",
   [FormReason.VisualArt]:
@@ -172,13 +172,13 @@ export default function Info() {
                       >
                         Select a reason
                       </option>
-                      <option
+                      {/* <option
                         value={FormReason.Performance}
                         className="text-white bg-black"
                         style={{ fontFamily: "sans-serif" }}
                       >
                         Performance/DJ
-                      </option>
+                      </option> */}
                       {/* <option
                         value={FormReason.Workshops}
                         className="text-white bg-black"
@@ -248,17 +248,18 @@ export default function Info() {
                             </div>
                           )}
                         </label>
-                        {formReason === FormReason.Performance ||
-                        // formReason === FormReason.Workshops ||
-                        formReason === FormReason.Stallholder ? (
-                          <label className="block">
-                            <span className="text-gray-100 font-mono">
-                              {organisationName[formReason] ??
-                                "Organisation Name"}
-                            </span>
-                            <input
-                              {...register("orgName")}
-                              className={`font-mono font-light
+                        {
+                          // formReason === FormReason.Performance ||
+                          // formReason === FormReason.Workshops ||
+                          formReason === FormReason.Stallholder ? (
+                            <label className="block">
+                              <span className="text-gray-100 font-mono">
+                                {organisationName[formReason] ??
+                                  "Organisation Name"}
+                              </span>
+                              <input
+                                {...register("orgName")}
+                                className={`font-mono font-light
                                 mt-0
                                 block
                                 w-full
@@ -266,9 +267,10 @@ export default function Info() {
                                 border-0 border-b border-white border-opacity-70
                                 focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                             `}
-                            />
-                          </label>
-                        ) : null}
+                              />
+                            </label>
+                          ) : null
+                        }
                         <label className="block">
                           <span className="text-gray-100 font-mono">
                             Email address*
@@ -351,17 +353,18 @@ export default function Info() {
                             </div>
                           )}
                         </label>
-                        {formReason === FormReason.Performance ||
-                        formReason === FormReason.VisualArt ||
-                        // formReason === FormReason.Workshops ||
-                        formReason === FormReason.Stallholder ? (
-                          <label className="block mt-4">
-                            <span className="text-gray-100 font-mono">
-                              Social media links
-                            </span>
-                            <textarea
-                              {...register("socials")}
-                              className={`font-mono font-light
+                        {
+                          // formReason === FormReason.Performance ||
+                          formReason === FormReason.VisualArt ||
+                          // formReason === FormReason.Workshops ||
+                          formReason === FormReason.Stallholder ? (
+                            <label className="block mt-4">
+                              <span className="text-gray-100 font-mono">
+                                Social media links
+                              </span>
+                              <textarea
+                                {...register("socials")}
+                                className={`font-mono font-light
                                 mt-0
                                 block
                                 w-full
@@ -369,11 +372,12 @@ export default function Info() {
                                 border-0 border-b                          
                                 focus:ring-0 focus:border-white placeholder:text-white placeholder:text-opacity-70
                               `}
-                              rows={4}
-                              placeholder="Facebook, Instagram, Soundcloud, Mixcloud, etc."
-                            ></textarea>
-                          </label>
-                        ) : null}
+                                rows={4}
+                                placeholder="Facebook, Instagram, Soundcloud, Mixcloud, etc."
+                              ></textarea>
+                            </label>
+                          ) : null
+                        }
                         <button
                           type="submit"
                           className="h-10 px-5 text-indigo-100 bg-primary-600  font-mono  transition-colors duration-150 focus:shadow-outline hover:bg-primary-700"
