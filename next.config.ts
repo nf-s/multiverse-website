@@ -24,7 +24,7 @@ const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   publicRuntimeConfig: {
     UMAMI_WEBSITE_ID: process.env.UMAMI_WEBSITE_ID,
-    contactEnabled: true,
+    contactEnabled: false,
   },
 };
 
