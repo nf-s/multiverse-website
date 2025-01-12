@@ -78,7 +78,7 @@ export default function LineupDialog({
                 <h1 className="text-center font-light font-mono text-primary-300">
                   {selectedArtist?.["ARTIST NAME"]}
                 </h1>
-                <Markdown>{selectedArtist?.BIO}</Markdown>
+                <Markdown>{selectedArtist?.BIO || "No bio."}</Markdown>
               </div>
             </>
           ) : null}
