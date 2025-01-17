@@ -71,7 +71,7 @@ export default function LineupDialog({
                 alt={selectedArtist?.["ARTIST NAME"]}
                 src={
                   selectedArtist?.imagePath ??
-                  `/images/lineup/${selectedArtist?.["ARTIST NAME"]}.png`
+                  `/images/lineup-circles/${selectedArtist?.["ARTIST NAME"]}.png`
                 }
                 width={300}
                 height={300}

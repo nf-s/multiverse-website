@@ -53,7 +53,7 @@ export default function Lineup() {
                     alt={artist["ARTIST NAME"]}
                     src={
                       artist?.imagePath ??
-                      `/images/lineup/${artist?.["ARTIST NAME"]}.png`
+                      `/images/lineup-circles/${artist?.["ARTIST NAME"]}.png`
                     }
                     width={300}
                     height={300}

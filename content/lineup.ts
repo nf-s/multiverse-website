@@ -134,7 +134,7 @@ export const lineup: Record<string, Artist[]> = {
     },
     {
       "ARTIST NAME": "prog?na",
-      imagePath: "/images/lineup/PROG_NA.png",
+      imagePath: "/images/lineup-circles/PROG_NA.png",
       BIO: "The psychedelic journey that awaits you when you step onto a prog?na dance floor is like no other, focusing more on the melodies rather than the basslines, \nprog?na will make sure you don't stop moving from the moment the fist tune start until the last song ends.",
       "ARTWORK COMPLETED": "YES",
       FACEBOOK: "",
@@ -389,7 +389,7 @@ export const lineup: Record<string, Artist[]> = {
     },
     {
       "ARTIST NAME": "MINITECELEC",
-      imagePath: "/images/lineup/placeholder.png",
+      imagePath: "/images/lineup-circles/placeholder.png",
       BIO: "Minimal as",
       "ARTWORK COMPLETED": "YES",
       FACEBOOK: "",
