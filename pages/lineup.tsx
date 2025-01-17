@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import LineupDialog from "../components/LineupDialog";
 import { lineup } from "../content/lineup";
 import LineupIntroMdx from "../content/lineup-intro.mdx";
+import Link from "next/link";
 
 export interface Artist {
   imagePath?: string;
@@ -34,7 +35,9 @@ export default function Lineup() {
       </Head>
       <ContentWrapper>
         <LineupIntroMdx />
-
+        <p>
+          Set Times can be found <Link href={"/set-times"}>here</Link>
+        </p>
         {Object.entries(allLineup).map(([heading, artists]) => (
           <Fragment key={heading}>
             {showTitles && <h2>{heading}</h2>}
@@ -64,7 +67,6 @@ export default function Lineup() {
             </div>
           </Fragment>
         ))}
-
         {showMoreToCome && <h2>More artists to be announced soon!</h2>}
         <LineupDialog
           selectedArtist={selectedArtist}
