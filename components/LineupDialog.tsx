@@ -69,7 +69,10 @@ export default function LineupDialog({
             <>
               <ExportedImage
                 alt={selectedArtist?.["ARTIST NAME"]}
-                src={`/images/lineup/${selectedArtist?.["ARTIST NAME"]}.png`}
+                src={
+                  selectedArtist?.imagePath ??
+                  `/images/lineup/${selectedArtist?.["ARTIST NAME"]}.png`
+                }
                 width={300}
                 height={300}
               />
